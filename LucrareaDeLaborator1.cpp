@@ -142,3 +142,81 @@ int main() {
     std::cout << "Valentina si Marina se vor intalni peste " << hours << " ore si " << mins << " minute." << std::endl;
 }
 */
+
+// 9. Este dat un număr real S – aria pătratului. Să se elaboreze un program care calculează
+// latura și perimetrul acestuia.
+
+/*
+#include <iostream>
+
+int main() {
+	double aria;
+	std::cout << "Introduceti aria patratului: ";
+	std::cin >> aria;
+	std::cout << "Latura patratului: " << std::sqrt(aria) << std::endl;
+	std::cout << "Perimetrul patratului: " << std::sqrt(aria) * 4 << std::endl;
+}
+*/
+
+// 10. O persoană a depus pe cont R lei. La sfârșitul fiecărei luni suma se mărește cu W 
+// procente. Ce sumă de bani va fi pe cont peste 3, 4, 5 luni?
+
+/*
+#include <iostream>
+
+int main() {
+	float lei, procente;
+	std::cout << "Introduceti suma depusa (lei): ";
+	std::cin >> lei;
+	std::cout << "Introduceti procentul de crestere lunar (%): ";
+	std::cin >> procente;
+	std::cout << "Suma dupa trei luni: " << ((lei / 100) * procente) * 3 << std::endl;
+    std::cout << "Suma dupa patru luni: " << ((lei / 100) * procente) * 4 << std::endl;
+    std::cout << "Suma dupa cinci luni: " << ((lei / 100) * procente) * 5 << std::endl;
+}
+*/
+
+// 11. Pe parcursul lecțiilor de informatică 4 elevi au rezolvat probleme la calculator.
+// Primul elev a rezolvat toate problemele în N min, toți ceilalți au folosit cu 10 min mai
+// mult decât precedentul său. Cât timp a fost necesar elevilor?
+
+/*
+#include <iostream>
+
+int main() {
+    unsigned int mins;
+	std::cout << "Introduceti timpul primului elev (minute): ";
+	std::cin >> mins;
+    std::cout << "Timpul necesar elevului al doilea: " << mins + 10 << " minute." << std::endl;
+    std::cout << "Timpul necesar elevului al treilea: " << mins + 20 << " minute." << std::endl;
+    std::cout << "Timpul necesar elevului al patrulea: " << mins + 30 << " minute." << std::endl;
+}
+*/
+
+// 12. Este dat un număr natural N. Să se elaboreze un program care calculează câte ore,
+// minute, secunde sunt în:
+// a) n zile(o zi = 24 ore);
+// b) n săptămâni(o săptămână = 7 zile);
+// c) luna mai.
+
+/*
+#include <iostream>
+
+int main() {
+	unsigned int n, hours, mins, secs;
+	std::cout << "Introduceti un numar natural: ";
+	std::cin >> n;
+	hours = n * 24;
+	mins = hours * 60;
+	secs = mins * 60;
+	std::cout << "In " << n << " zile sunt " << hours << " ore, " << mins << " minute si " << secs << " secunde." << std::endl;
+    hours = n * 24 * 7;
+    mins = hours * 60;
+    secs = mins * 60;
+    std::cout << "In " << n << " saptamani sunt " << hours << " ore, " << mins << " minute si " << secs << " secunde." << std::endl;
+    hours = 24 * 31;
+    mins = hours * 60;
+    secs = mins * 60;
+    std::cout << "In luna mai sunt " << hours << " ore, " << mins << " minute si " << secs << " secunde." << std::endl;
+}
+*/
