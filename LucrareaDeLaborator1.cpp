@@ -84,13 +84,7 @@ int main() {
     int x;
     std::cout << "Introduceti un numar din patru cifre: ";
     std::cin >> x;
-
-    int one = x / 1000;
-    int two = x / 100 % 10;
-    int three = x / 10 % 10;
-    int four = x % 10;
-
-    std::cout << "Numarul obtinut: " << (two * 100 + three * 10 + four) + (three * 10 + four) + four << std::endl;
+    std::cout << "Numarul obtinut: " << (x / 100 % 10 * 100 + x / 10 % 10 * 10 + x % 10) + (x / 10 % 10 * 10 + x % 10) + x % 10 << std::endl;
 }
 */
 
@@ -99,24 +93,16 @@ int main() {
 
 /*
 #include <iostream>
+#include <cmath>
 
 int main() {
-    int kolea, misha;
+    double kolea, misha;
     std::cout << "Introduceti varsta lui Nicolae: ";
     std::cin >> kolea;
     std::cout << "Introduceti varsta lui Mihai: ";
     std::cin >> misha;
-    std::cout << "Varsta medie: " << (kolea + misha) / 2 << std::endl;
-
-    if (kolea > misha) {
-        std::cout << "Diferenta de varsta: " << (kolea - misha) << std::endl;
-    }
-    else if (kolea < misha) {
-        std::cout << "Diferenta de varsta: " << (misha - kolea) << std::endl;
-    }
-    else {
-        std::cout << "Diferenta de varsta: 0";
-    }
+    std::cout << "Varsta medie: " << (kolea + misha) / 2.0 << std::endl;
+    std::cout << "Diferenta de varsta: " << std::abs(kolea - misha) << std::endl;
 }
 */
 
