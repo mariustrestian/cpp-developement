@@ -148,13 +148,15 @@ int main() {
 
 /*
 #include <iostream>
+#include <cmath>
 
 int main() {
-	double aria;
+	double aria, sqrtAria;
 	std::cout << "Introduceti aria patratului: ";
 	std::cin >> aria;
-	std::cout << "Latura patratului: " << std::sqrt(aria) << std::endl;
-	std::cout << "Perimetrul patratului: " << std::sqrt(aria) * 4 << std::endl;
+	sqrtAria = std::sqrt(aria);
+	std::cout << "Latura patratului: " << sqrtAria << std::endl;
+	std::cout << "Perimetrul patratului: " << sqrtAria * 4 << std::endl;
 }
 */
 
@@ -163,16 +165,20 @@ int main() {
 
 /*
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 
 int main() {
-	float lei, procente;
+	double lei, procente, formula;
 	std::cout << "Introduceti suma depusa (lei): ";
 	std::cin >> lei;
 	std::cout << "Introduceti procentul de crestere lunar (%): ";
 	std::cin >> procente;
-	std::cout << "Suma dupa trei luni: " << ((lei / 100) * procente) * 3 << std::endl;
-    std::cout << "Suma dupa patru luni: " << ((lei / 100) * procente) * 4 << std::endl;
-    std::cout << "Suma dupa cinci luni: " << ((lei / 100) * procente) * 5 << std::endl;
+	formula = 1.0 + procente / 100.0;
+    std::cout << std::fixed << std::setprecision(2);
+	std::cout << "Suma dupa trei luni: " << lei * std::pow(formula, 3) << std::endl;
+    std::cout << "Suma dupa patru luni: " << lei * std::pow(formula, 4) << std::endl;
+    std::cout << "Suma dupa cinci luni: " << lei * std::pow(formula, 5) << std::endl;
 }
 */
 
@@ -190,6 +196,7 @@ int main() {
     std::cout << "Timpul necesar elevului al doilea: " << mins + 10 << " minute." << std::endl;
     std::cout << "Timpul necesar elevului al treilea: " << mins + 20 << " minute." << std::endl;
     std::cout << "Timpul necesar elevului al patrulea: " << mins + 30 << " minute." << std::endl;
+    std::cout << "Timpul total necesar elevilor: " << mins * 4 + 60 << " minute." << std::endl;
 }
 */
 
@@ -203,7 +210,7 @@ int main() {
 #include <iostream>
 
 int main() {
-	unsigned int n, hours, mins, secs;
+	unsigned long long int n, hours, mins, secs;
 	std::cout << "Introduceti un numar natural: ";
 	std::cin >> n;
 	hours = n * 24;
