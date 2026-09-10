@@ -5,12 +5,12 @@
 #include <iostream>
 
 int main() {
-    int years;
+    unsigned int years;
     std::cout << "Introduceti numarul de ani: ";
     std::cin >> years;
     std::cout << "Luni: " << years * 12 << " Zile: " << years * 365 << " Ore: " << years * 8760 << std::endl;
  }
- */
+*/
 
 // 2. Se citește un număr X format din exact 4 cifre. Să se afișeze numărul care se obține 
 // prin eliminarea cifrelor din mijloc.
@@ -22,9 +22,7 @@ int main() {
     int x;
     std::cout << "Introduceti un numar de patru cifre: ";
     std::cin >> x;
-    int first = x / 1000;
-    int last = x % 10;
-    std::cout << "Numarul primit: " << first * 10 + last << std::endl;
+    std::cout << "Numarul primit: " << x / 1000 * 10 + x % 10 << std::endl;
 }
 */
 
@@ -73,7 +71,7 @@ int main() {
 }
 */
 
-// 5. Se citește un număr natural X format din 4 cifre.Să se afișeze numărul obținut din
+// 5. Se citește un număr natural X format din 4 cifre. Să se afișeze numărul obținut din
 // suma numerelor care se obțin eliminând pe rând prima cifră a lui X, apoi primele două,
 // apoi primele trei.
 
@@ -84,7 +82,7 @@ int main() {
     int x;
     std::cout << "Introduceti un numar din patru cifre: ";
     std::cin >> x;
-    std::cout << "Numarul obtinut: " << (x / 100 % 10 * 100 + x / 10 % 10 * 10 + x % 10) + (x / 10 % 10 * 10 + x % 10) + x % 10 << std::endl;
+    std::cout << "Numarul obtinut: " << x % 1000 + x % 100 + x % 10 << std::endl;
 }
 */
 
@@ -129,9 +127,10 @@ int main() {
 
 /*
 #include <iostream>
+#include <cmath>
 
 int main() {
-    int Vvalentina, Vmarina, hours, mins; float distanta;
+	float Vvalentina, Vmarina, distanta; unsigned int hours, mins;
     std::cout << "Introduceti viteza de deplasare a Valentinei (km/h): ";
     std::cin >> Vvalentina;
     std::cout << "Introduceti viteza de deplasare a Marinei (km/h): ";
@@ -139,7 +138,7 @@ int main() {
     std::cout << "Introduceti distanta initiala dintre Valentina si Marina (km): ";
     std::cin >> distanta;
     hours = distanta / (Vvalentina + Vmarina);
-    mins = distanta / (Vvalentina + Vmarina) * 60 - (60 * hours);
+    mins = std::round(distanta / (Vvalentina + Vmarina) * 60 - (60 * hours));
     std::cout << "Valentina si Marina se vor intalni peste " << hours << " ore si " << mins << " minute." << std::endl;
 }
 */
