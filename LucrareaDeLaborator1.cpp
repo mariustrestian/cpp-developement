@@ -1,4 +1,4 @@
-// 1. Să se scrie un program care citește un număr de ani și calculează numărul de luni, zile 
+// 1. Să se scrie un program care citește un număr de ani și calculează numărul de luni, zile
 // și ore corespunzătoare.Se consideră că un an are 365 zile.
 
 /*
@@ -12,7 +12,7 @@ int main() {
  }
 */
 
-// 2. Se citește un număr X format din exact 4 cifre. Să se afișeze numărul care se obține 
+// 2. Se citește un număr X format din exact 4 cifre. Să se afișeze numărul care se obține
 // prin eliminarea cifrelor din mijloc.
 
 /*
@@ -26,7 +26,7 @@ int main() {
 }
 */
 
-// 3. Ion și Vasile joacă următorul joc: Ion spune un număr, iar Vasile trebuie să găsească 
+// 3. Ion și Vasile joacă următorul joc: Ion spune un număr, iar Vasile trebuie să găsească
 // cinci numere consecutive, crescătoare, numărul din mijloc fiind cel ales de Ion. Ajutați-l
 // pe Vasile să găsească răspunsul mai repede.
 
@@ -41,7 +41,7 @@ int main() {
 }
 */
 
-// 4. Se citește un număr natural X format din exact 4 cifre nenule. Afișați numerele 
+// 4. Se citește un număr natural X format din exact 4 cifre nenule. Afișați numerele
 // obținute în următoarele moduri :
 // a) schimbând prima cifră cu ultima;
 // b) schimbând între ele cifrele din mijloc;
@@ -160,7 +160,7 @@ int main() {
 }
 */
 
-// 10. O persoană a depus pe cont R lei. La sfârșitul fiecărei luni suma se mărește cu W 
+// 10. O persoană a depus pe cont R lei. La sfârșitul fiecărei luni suma se mărește cu W
 // procente. Ce sumă de bani va fi pe cont peste 3, 4, 5 luni?
 
 /*
@@ -225,5 +225,88 @@ int main() {
     mins = hours * 60;
     secs = mins * 60;
     std::cout << "In luna mai sunt " << hours << " ore, " << mins << " minute si " << secs << " secunde." << std::endl;
+}
+*/
+
+// 13. Elevul dorește să înscrie pe o dischetă 3 fișiere de dimensiuni X, Y, Z Kb. Volumul
+// dischetei este de 1,41Mb. De câte dischete are nevoie elevul?
+
+/*
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double x, y, z;
+    cout << "Introduceti trei dimensiuni ale fisierelor (Kb):";
+    cin >> x >> y >> z;
+    cout << "Dimensiunile tuturor fisierelor este de " << x + y + z << " Kb. Aveti nevoie de " << ceil((x + y + z) / 1410) << " dischete." << endl;
+}
+*/
+
+// 14. Se citește un număr natural X format din 4 cifre. Să se afișeze numărul obținut din
+// suma numerelor care se obțin eliminând pe rând ultima cifră a lui X, apoi ultimele două,
+// apoi ultimele trei.
+
+/*
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    unsigned int x;
+    cout << "Introduceti un numar natural format din patru cifre: ";
+    cin >> x;
+    cout << x / 10 + x / 100 + x / 1000 << endl;
+}
+*/
+
+// 15. O familie a hotărât să schimbe vechiul său automobil pe unul nou. Prețul cu care
+// poate fi vândut automobilul vechi este N lei, suma de pe contul bancar al familiei este de
+// K lei. Luând în considerație că suma de care dispune familia este mai mare decât prețul
+// automobilului nou și prețul acestuia este de X lei, să se determine ce sumă de bani va avea
+// familia după procurarea automobilului.
+
+/*
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    unsigned int n, k, x;
+    cout << "Introduceti pretul cu care poate fi vandut automobilul vechi: ";
+    cin >> n;
+    cout << "Introduceti suma de pe contul bancar al familiei: ";
+    cin >> k;
+    cout << "Introduceti pretul automobilului nou: ";
+    cin >> x;
+    if (n + k < x) {
+        cout << "Suma de bani nu este suficienta pentru procurarea automobilului nou." << endl; }
+        else {
+            cout << "Suma de bani pe care o va avea familia dupa procurarea automobilului este de " << n + k - x << " lei." << endl;
+    }
+}
+*/
+
+// 16. Să se afișeze imaginea inversă a numărul natural introdus de 3 cifre. NU ESTE GATA.
+
+/*
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    unsigned int num;
+    cout << "Introduceti un numar natural format din trei cifre: ";
+    cin >> num;
+    if (num < 100 || num > 999) {
+        cout << "Numarul este mai mare sau mai mic decat un numar de trei cifre." << endl; }
+        else {
+            cout << "Imaginea inversa a numarul natural introdus de 3 cifre: " << num % 10 * 100 << endl;
+        }
 }
 */
