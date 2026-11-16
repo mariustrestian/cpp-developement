@@ -291,7 +291,7 @@ int main() {
 }
 */
 
-// 16. Să se afișeze imaginea inversă a numărul natural introdus de 3 cifre. NU ESTE GATA.
+// 16. Să se afișeze imaginea inversă a numărul natural introdus de 3 cifre.
 
 /*
 #include <iostream>
@@ -306,7 +306,7 @@ int main() {
     if (num < 100 || num > 999) {
         cout << "Numarul este mai mare sau mai mic decat un numar de trei cifre." << endl; }
         else {
-            cout << "Imaginea inversa a numarul natural introdus de 3 cifre: " << num % 10 * 100 << endl;
+            cout << "Imaginea inversa a numarul natural introdus de 3 cifre: " << (num % 10 * 100) + (num % 100 - num % 10) + num / 100 << endl;
         }
 }
 */
